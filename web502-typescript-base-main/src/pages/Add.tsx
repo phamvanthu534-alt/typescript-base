@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
 import { useNavigate } from "react-router-dom";
 
-// TYPE
+
 type FormValues = {
   name: string;
   credit: number;
@@ -35,7 +35,7 @@ function Add() {
     try {
       await axios.post("http://localhost:3000/courses", values);
       alert("Thêm thành công");
-      navigate("/"); // quay về list
+      navigate("/"); 
     } catch (error) {
       console.log(error);
     }
@@ -46,7 +46,7 @@ function Add() {
       <h1 className="text-2xl font-semibold mb-6">Thêm khóa học</h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        {/* NAME */}
+       
         <div>
           <input
             {...register("name")}
@@ -58,7 +58,7 @@ function Add() {
           )}
         </div>
 
-        {/* CREDIT */}
+       
         <div>
           <input
             type="number"
@@ -71,7 +71,7 @@ function Add() {
           )}
         </div>
 
-        {/* CATEGORY */}
+       
         <div>
           <input
             {...register("category")}
@@ -85,7 +85,7 @@ function Add() {
           )}
         </div>
 
-        {/* TEACHER */}
+    
         <div>
           <input
             {...register("teacher")}
@@ -107,13 +107,7 @@ function Add() {
             Thêm
           </button>
 
-          <button
-            type="button"
-            onClick={() => navigate("/")}
-            className="border px-4 py-2 rounded"
-          >
-            Huỷ
-          </button>
+         
         </div>
       </form>
     </div>

@@ -1,7 +1,7 @@
 import { Link, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
-// Import các trang
+
 import List from "./pages/List";
 import Add from "./pages/Add";
 import Edit from "./pages/Edit";
@@ -10,11 +10,11 @@ import Edit from "./pages/Edit";
 function App() {
   return (
     <>
-      {/* NAVBAR */}
+    
       <nav className="bg-blue-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="/" className="text-xl font-semibold">
-            <strong>WEB501 App</strong>
+            <strong>WEB502 App</strong>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
